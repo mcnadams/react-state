@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color Display makes a ColorDisplay 1`] = `
+<div
+  className="red"
+  id="color-display"
+/>
+`;
