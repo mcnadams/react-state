@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Color Picker renders a Color Button 1`] = `
+exports[`Color Picker Makes the Color Picker 1`] = `
 <Fragment>
   <button
     className="red"
