@@ -1,0 +1,18 @@
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.blue {
+  background: blue;
+}
+
+#color-block {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
