@@ -67,6 +67,7 @@ class RandomColor extends PureComponent {
       width: '20vh',
       height: '20vh',
       display: 'inline-block',
+      transition: 'background .15s linear'
     };
     return <div style={styles}></div>;
   }
