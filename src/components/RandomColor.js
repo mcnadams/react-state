@@ -1,12 +1,20 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 
-export default class RandomColor extends PureComponent {
+class RandomColor extends PureComponent {
 
   state = {
     color: '',
     'background-image': ''
   }
+
+  // constructor(intervalLength) {
+  //   // super();
+  //   console.log(Math.random() * 200000);
+  //   this.intervalLength = intervalLength;
+  //   this.intervalLength = 2000;
+  // }
 
   randomColor = () => {
     const colors = [
@@ -26,6 +34,8 @@ export default class RandomColor extends PureComponent {
   }
 
   componentDidMount() {
+    this.intervalLength = this.props.intervalLength || Math.random() * 3000;
+    console.log('interval', this.intervalLength);
     this.intervalId = setInterval(() => {
       const newColor = this.randomColor();
       if(newColor === this.state.color) {
@@ -36,7 +46,7 @@ export default class RandomColor extends PureComponent {
       else {
         this.setState({ color: newColor, 'background-image': '' });
       }
-    }, 1000);
+    }, this.intervalLength);
   }
 
   componentWillUnmount() {
@@ -46,9 +56,15 @@ export default class RandomColor extends PureComponent {
   render() {
     const styles = {
       background: this.state.color,
-      width: '80vh',
-      height: '80vh'
+      width: '20vh',
+      height: '20vh'
     };
     return <div style={styles}></div>;
   }
 }
+
+RandomColor.propTypes = {
+  intervalLength: PropTypes.number
+};
+
+export default RandomColor;
