@@ -5,8 +5,9 @@ exports[`RandomColor let's just pass Travis please 1`] = `
   style={
     Object {
       "background": "",
-      "height": "80vh",
-      "width": "80vh",
+      "display": "inline-block",
+      "height": "20vh",
+      "width": "20vh",
     }
   }
 />
