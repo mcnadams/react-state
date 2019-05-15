@@ -5,7 +5,7 @@ export default class RandomColor extends PureComponent {
 
   state = {
     color: '',
-    img: ''
+    'background-image': ''
   }
 
   randomColor = () => {
@@ -27,7 +27,15 @@ export default class RandomColor extends PureComponent {
 
   componentDidMount() {
     setInterval(() => {
-      this.setState({ color: this.randomColor(), img: '' });
+      const newColor = this.randomColor();
+      if(newColor === this.state.color) {
+        console.log('repeat color');
+        const img = 'https://i.dailymail.co.uk/i/pix/2016/03/18/15/324D202500000578-3498922-image-a-33_1458315465874.jpg';
+        this.setState({ color: `center / contain url(${img})` });
+      }
+      else {
+        this.setState({ color: newColor, 'background-image': '' });
+      }
     }, 1000);
   }
 
