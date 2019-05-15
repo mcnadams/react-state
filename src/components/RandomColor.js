@@ -9,13 +9,6 @@ class RandomColor extends PureComponent {
     'background-image': ''
   }
 
-  // constructor(intervalLength) {
-  //   // super();
-  //   console.log(Math.random() * 200000);
-  //   this.intervalLength = intervalLength;
-  //   this.intervalLength = 2000;
-  // }
-
   randomColor = () => {
     const colors = [
       'red',
@@ -48,11 +41,13 @@ class RandomColor extends PureComponent {
 
   componentDidMount() {
     this.intervalLength = this.props.intervalLength || Math.random() * 3000;
+    while(this.intervalLength < 500) {
+      this.intervalLength = Math.random() * 3000;
+    }
     console.log('interval', this.intervalLength);
     this.intervalId = setInterval(() => {
       const newColor = this.randomColor();
       if(newColor === this.state.color) {
-        console.log('repeat color');
         const img = 'https://i.dailymail.co.uk/i/pix/2016/03/18/15/324D202500000578-3498922-image-a-33_1458315465874.jpg';
         this.setState({ color: `center / contain url(${img})` });
       }
@@ -71,7 +66,7 @@ class RandomColor extends PureComponent {
       background: this.state.color,
       width: '20vh',
       height: '20vh',
-      display: 'inline-block'
+      display: 'inline-block',
     };
     return <div style={styles}></div>;
   }

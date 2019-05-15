@@ -1,25 +1,8 @@
 import React from 'react';
-import RandomColor from './RandomColor';
+import ColorDisplay from './ColorDisplay';
+// import RandomColor from './RandomColor';
 
 export default function App() {
-  return (
-    <>
-      <RandomColor intervalLength={1000} />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-      <RandomColor />
-    </>
-  );
+  console.log('app');
+  return <ColorDisplay />;
 }
