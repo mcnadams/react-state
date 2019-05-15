@@ -26,7 +26,7 @@ export default class RandomColor extends PureComponent {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       const newColor = this.randomColor();
       if(newColor === this.state.color) {
         console.log('repeat color');
@@ -37,6 +37,10 @@ export default class RandomColor extends PureComponent {
         this.setState({ color: newColor, 'background-image': '' });
       }
     }, 1000);
+  }
+
+  componentWillUnmount() {
+    this.intervalId && clearInterval(this.intervalId);
   }
 
   render() {
