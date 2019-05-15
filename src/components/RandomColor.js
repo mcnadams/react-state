@@ -24,7 +24,20 @@ class RandomColor extends PureComponent {
       'green',
       'blue',
       'purple',
-      'fuschia'
+      'fuschia', 
+      'lime',
+      'cerulean',
+      'salmon',
+      'maroon',
+      'teal',
+      'navy',
+      'aqua',
+      'gray',
+      'orangered',
+      'crimson',
+      'orchid',
+      'thistle',
+      'mediumslateblue'
     ];
 
     let rand = Math.random() * colors.length;
@@ -57,7 +70,8 @@ class RandomColor extends PureComponent {
     const styles = {
       background: this.state.color,
       width: '20vh',
-      height: '20vh'
+      height: '20vh',
+      display: 'inline-block'
     };
     return <div style={styles}></div>;
   }

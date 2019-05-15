@@ -6,6 +6,20 @@ export default function App() {
     <>
       <RandomColor intervalLength={1000} />
       <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
     </>
   );
 }
