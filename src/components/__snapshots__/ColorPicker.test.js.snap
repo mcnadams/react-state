@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color Picker Makes the Color Picker 1`] = `
+<Fragment>
+  <button
+    className="red"
+    onClick={[Function]}
+  >
+    Red
+  </button>
+  <button
+    className="yellow"
+    onClick={[Function]}
+  >
+    Yellow
+  </button>
+  <button
+    className="blue"
+    onClick={[Function]}
+  >
+    Blue
+  </button>
+  <div
+    className=""
+    id="color-block"
+  />
+</Fragment>
+`;
