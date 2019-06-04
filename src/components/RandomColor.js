@@ -6,7 +6,8 @@ class RandomColor extends PureComponent {
 
   state = {
     color: '',
-    'background-image': ''
+    'background-image': '',
+    border: ''
   }
 
   randomColor = () => {
@@ -42,12 +43,14 @@ class RandomColor extends PureComponent {
 
   componentDidMount() {
     this.intervalLength = this.props.intervalLength || Math.random() * 3000;
-    while(this.intervalLength < 500) {
+    while(this.intervalLength < 300) {
       this.intervalLength = Math.random() * 3000;
     }
     console.log('interval', this.intervalLength);
     this.intervalId = setInterval(() => {
       const newColor = this.randomColor();
+      const borderColor = this.randomColor();
+      this.setState({ border: borderColor });
       if(newColor === this.state.color) {
         const img = 'https://i.dailymail.co.uk/i/pix/2016/03/18/15/324D202500000578-3498922-image-a-33_1458315465874.jpg';
         this.setState({ color: `center / contain url(${img})` });
@@ -65,6 +68,7 @@ class RandomColor extends PureComponent {
   render() {
     const styles = {
       background: this.state.color,
+      border: `3px solid ${this.state.border}`,
       width: '20vh',
       height: '20vh',
       display: 'inline-block',

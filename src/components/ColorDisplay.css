@@ -1,5 +1,8 @@
 .colorDisplay {
 
+  background-image: url("https://i.imgur.com/xQxHjAK.gif");
+  background-repeat: repeat;
+
   div:nth-child(6n) {
     animation: squishX 2s ease-in 3s infinite alternate;
   }
