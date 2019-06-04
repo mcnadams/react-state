@@ -1,5 +1,6 @@
 import React from 'react';
 import RandomColor from './RandomColor';
+import styles from './ColorDisplay.css';
 
 //displays one RandomColor
 //has a button that adds another RandomColor
@@ -7,8 +8,8 @@ import RandomColor from './RandomColor';
 
 export default function ColorDisplay() {
   return (
-    <>
-      <RandomColor intervalLength={1000} />
+    <section className={styles.colorDisplay}>
+      <RandomColor intervalLength={1000}/>
       <RandomColor />
       <RandomColor />
       <RandomColor />
@@ -24,6 +25,51 @@ export default function ColorDisplay() {
       <RandomColor />
       <RandomColor />
       <RandomColor />
-    </>
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+      <RandomColor />
+    </section >
   );
 }

@@ -30,7 +30,8 @@ class RandomColor extends PureComponent {
       'crimson',
       'orchid',
       'thistle',
-      'mediumslateblue'
+      'mediumslateblue',
+      'hotpink'
     ];
 
     let rand = Math.random() * colors.length;
