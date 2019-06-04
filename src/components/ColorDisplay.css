@@ -1,0 +1,55 @@
+.colorDisplay {
+
+  background-image: url("https://i.imgur.com/xQxHjAK.gif");
+  background-repeat: repeat;
+
+  div:nth-child(6n) {
+    animation: squishX 2s ease-in 3s infinite alternate;
+  }
+  
+  div:nth-child(6n + 1) {
+    animation: squishY 1s ease-in-out 1s infinite alternate;
+  }
+  
+  div:nth-child(6n + 2) {
+    animation: rotate 1s ease-in 1s infinite alternate;
+  }
+
+  div:nth-child(6n + 3) {
+    animation: squishBoth 2s ease-in 1s infinite alternate;
+  }
+  
+  div:nth-child(6n + 4) {
+    animation: rotates 1s ease-in-out 1s infinite alternate;
+  }
+  
+  div:nth-child(6n + 5) {
+    animation: squishBoth 1s ease-in 1s infinite alternate;
+  }
+
+  @keyframes squishX {
+    from { transform: scaleX(0.1) rotate(-180deg);}
+    to   { transform: scaleX(1); }
+  }
+  
+  @keyframes squishY {
+    from { transform: scaleY(0.1) scaleX(0.8) rotate(20deg); }
+    to   { transform: scaleY(1) scaleX(1); }
+  }
+  
+  @keyframes squishBoth {
+    from { transform: scaleY(0.1) scaleX(0.1); }
+    to   { transform: scaleY(1) scaleX(1); }
+  }
+  
+  @keyframes rotate {
+    from { transform: scaleY(0.2) scaleX(0.5) rotate(180deg); }
+    to   { transform: scaleY(1) scaleX(1); }
+  }
+  
+  @keyframes rotates {
+    from { transform: scaleY(0.9) scaleX(0.9) rotate(270deg); }
+    to   { transform: scaleY(1) scaleX(1); }
+  }
+  
+}
